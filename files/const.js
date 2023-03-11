@@ -15,7 +15,7 @@ window.onload = function() {
         (glue.secs < 10 ? "0" + glue.secs : glue.secs);
         $("#squirt").html(final);
     }
-    $.ajax("/logs.json").done(function(data) {
+    $.ajax("/venkant/logs.json").done(function(data) {
         const text = `<p class="messagedata" style="color:#000;">F: ${data.count.f.length} ~ WD: ${data.count.wd.length}</p>` + data.data.map(d => `<div class="message"><p class="author" style="margin-bottom:0;">${d.author} <span class="date">(${d.date})</span></p><p class="messagedata">${d.message}</p></div>`).join("<br>") + `<br><p style="color:#000;" class="messagedata">and more to be written...</p>`
         $("#messagelist").html(text);
     });
