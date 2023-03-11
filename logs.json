@@ -1,0 +1,14 @@
+{
+    "title": "logs",
+    "count": {
+        "f": ["kant-11/03/2023"],
+        "wd": ["venky-09/03/2023"]
+    },
+    "data": [
+        {
+            "author": "Kant",
+            "date": "11-03-2023",
+            "message": "Hark! What words shall fill this space, where presently the noble script shall grace this page? Shall I speak of love and war, of hope and grief, of life and death? Nay, for it is not yet time. Let us instead ponder the great mysteries of the world, the questions that vex us so, that keep us up at night, and that drive us to seek knowledge and truth.Perchance we might consider the nature of the stars, and how they twinkle in the night sky, or the majesty of the sun, as it rises each day to warm and nourish our souls. Or we might speak of the endless sea, and the mysteries that lie hidden in its depths, or the forests, with their tangled paths and ancient trees. Let us take a moment to reflect upon the beauty of life, and the wonder that surrounds us every day. For though we may not always see it, there is magic in this world, and it is our privilege to partake of it. So let us be grateful for this moment, and for all the moments that are yet to come."
+        }
+    ]
+}

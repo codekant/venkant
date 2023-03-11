@@ -7,13 +7,13 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Venkant</title>
-        <link rel="shortcut icon" href="aak.gif">
+        <link rel="shortcut icon" href="files/aak.gif">
         <meta name="og:title" content="Venkant" />
          <meta name="og:site_name" content="venkant">
         <meta name="og:type" content="website" />
         <meta name="owner" content="venkant">
         <meta name="og:url" content="https://codekant.github.io/venkant/" />
-        <meta name="og:image" content="https://codekant.github.io/venkant/aak.gif" />
+        <meta name="og:image" content="https://codekant.github.io/venkant/files/aak.gif" />
         <meta name="description" content="Hark! What words shall fill this space, where presently the noble script shall grace this page? Shall I speak of love and war, of hope and grief, of life and death? Nay, for it is not yet time. Let us instead ponder the great mysteries of the world, the questions that vex us so, that keep us up at night, and that drive us to seek knowledge and truth.
         Perchance we might consider the nature of the stars, and how they twinkle in the night sky, or the majesty of the sun, as it rises each day to warm and nourish our souls. Or we might speak of the endless sea, and the mysteries that lie hidden in its depths, or the forests, with their tangled paths and ancient trees.
         Let us take a moment to reflect upon the beauty of life, and the wonder that surrounds us every day. For though we may not always see it, there is magic in this world, and it is our privilege to partake of it. So let us be grateful for this moment, and for all the moments that are yet to come." />
@@ -22,48 +22,18 @@
         Yet, even as I ponder these weighty matters, my mind doth wander to thoughts of a more frivolous nature - of grand banquets and revels, of jousts and tourneys, of music and dance and all manner of merriment.
         But hark! What is this? My mind doth grow weary of idle speculation, and yearns for the sweet repose of slumber. Pray, do not disturb me further, for I must needs rest my head and dream of more pleasant things." />
         <meta name="theme-color" content="#fffdfc">
-        <style>
-            body { 
-                background-color: rgb(0, 0, 0);
-                color: rgb(255, 255, 255);
-                padding-top: 20%;
-                padding-left: 1rem;
-                text-align: center;
-                font-family: 'Poppins', sans-serif;
-                font-size: medium;
-            }
-            .lock {
-                position: absolute;
-                top: 47%;
-                left: 50%;
-                -moz-transform: translateX(-50%) translateY(-50%);
-                -webkit-transform: translateX(-50%) translateY(-50%);
-                transform: translateX(-50%) translateY(-50%);   
-            }
-        </style>
+        <link rel="stylesheet" href="files/style.css"></style>
     </head>
     <body>
-        <div class="lock">
-            <p id="squirt" style="margin-bottom:-10px;font-size:xx-large;font-weight:500;">00:00:00:00</h2><p>
-            <p style="font-weight:200;">5 March, 2023.</p>
+        <div id="main" class="lock">
+            <button id="messages" style="margin-bottom:0px;font-size:large;">💬</button>
+            <p id="squirt" style="margin-top:0px;margin-bottom:-15px;font-size:xx-large;font-weight:500;">00:00:00:00</h2><p>
+            <p style="font-weight:200;margin-top:0;">5 March, 2023.</p>
+        </div>
+        <div class="lock messagelist" id="messagelist">
+            <p style="color:#000;margin-top:20%;" class="messagedata">[awkward silence, unable to load content]</p>
         </div>
         <script src="https://code.jquery.com/jquery-3.6.3.min.js" crossorigin="anonymous"></script>
-        <script>
-            setInterval(update, 1000);
-            function update() {
-                let timestamp = new Date(Date.now() - 1677954600000);
-                const glue = {
-                    days: Math.floor((Date.now() - 1677954600000)/84000000),
-                    hours: timestamp.getUTCHours(),
-                    mins: timestamp.getUTCMinutes(),
-                    secs: timestamp.getUTCSeconds()
-                }
-                let final = (glue.days < 10 ? "0" + glue.days : glue.days) + ":" + 
-                (glue.hours < 10 ? "0" + glue.hours : glue.hours) + ":" +
-                (glue.mins < 10 ? "0" + glue.mins : glue.mins) + ":" + 
-                (glue.secs < 10 ? "0" + glue.secs : glue.secs);
-                $("#squirt").html(final);
-            }
-        </script>
+        <script src="files/const.js"></script>
     </body>
 </html>
