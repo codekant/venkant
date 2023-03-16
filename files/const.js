@@ -2,9 +2,9 @@ window.onload = function() {
     $("#main").fadeIn(500)
     setInterval(update, 1000);
     function update() {
-        let timestamp = new Date(Date.now() - 1677954600000);
+        let timestamp = new Date(Date.now() - 1678991400000);
         const glue = {
-            days: Math.floor((Date.now() - 1677954600000)/84000000),
+            days: Math.floor((Date.now() - 1678991400000)/84000000),
             hours: timestamp.getUTCHours(),
             mins: timestamp.getUTCMinutes(),
             secs: timestamp.getUTCSeconds()
