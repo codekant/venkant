@@ -15,14 +15,23 @@ window.onload = function() {
         (glue.secs < 10 ? "0" + glue.secs : glue.secs);
         $("#squirt").html(final);
     }
-    $.ajax("/venkant/logs.json").done(function(data) {
-        const text = `<p class="messagedata" style="color:#000;">F: ${data.count.f.length} ~ WD: ${data.count.wd.length}</p>` + data.data.map(d => `<div class="message"><p class="author" style="margin-bottom:0;">${d.author} <span class="date">(${d.date})</span></p><p class="messagedata">${d.message}</p></div>`).join("<br>") + `<br><p style="color:#000;" class="messagedata">and more to be written...</p>`
+    $.ajax("/logs.json").done(function(data) {
+        const text = `<p class="messagedata" style="color:#000;">F: ${data.count.f.length} ~ WD: ${data.count.wd.length}<button id="logs">♻️</button></p>` + data.data.map(d => `<div class="message"><p class="author" style="margin-bottom:0;">${d.author} <span class="date">(${d.date})</span></p><p class="messagedata">${d.message}</p></div>`).join("<br>") + `<br><p style="color:#000;" class="messagedata">and more to be written...</p>`
+        const logs = data.count.f.map(a => `<div class="messagedata"><p class="message"><span class="author">[F]</span> ${a.split("-")[0]} logged on <span class="author">${a.split("-")[1]}</span></p></div>`) + data.count.wd.map(a => `<div class="messagedata"><p class="message"><span class="author">[WD]</span> ${a.split("-")[0]} logged on <span class="author">${a.split("-")[1]}</span></p></div>`)
         $("#messagelist").html(text);
+        $("#loglist").html(logs)
+        $("#logs").on("click", () => {
+            $("#loglist").fadeIn();
+        })
     });
     $("#messages").on("click", () => {
         $("#messagelist").fadeIn();
     })
     $(".messagelist").on("click", () => {
         $("#messagelist").fadeOut();
+    })
+    $("#loglist").on("click", () => {
+        $("#loglist").fadeOut();
+        $("#messagelist").fadeIn();
     })
 }

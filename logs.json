@@ -1,8 +1,8 @@
 {
     "title": "logs",
     "count": {
-        "f": ["kant-11/03/2023", "kant-12/03/2023", "venky-09/03/2023", "venky-16/03/2023", "kant-16/03/2023"],
-        "wd": ["venky-09/03/2023", "venky-15/03/2023"]
+        "f": [],
+        "wd": ["kant-21/03/2023"]
     },
     "data": [
         {
@@ -19,6 +19,11 @@
             "author": "Venky",
             "date": "15/03/2023",
             "message": "10 days past; This journey began... Nor monkey nor I, failure hence; Thou kicks't me, brings't me down! Oh fool! Never think I won't rebound."
+        },
+        {
+            "author": "Venky",
+            "date": "21/03/2023",
+            "message": "Upon this journey embark once again, some spy looks disgust. In felony, no crime. This twerkmonster booty sublime, snooty patootie grimes. He jingle my bell, fancy knell, sunflower smell, DO NOT YELL!"
         }
     ]
 }
