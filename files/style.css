@@ -60,17 +60,7 @@ body {
     margin-top:0;
 }
 ::-webkit-scrollbar {
-    width: 3px;
-  }
-  ::-webkit-scrollbar-track {
-    background: #fff;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #000;
-    border-radius: 5px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    opacity: .9;
+    display:none;
   }
 #logs {
     background-color: transparent;
