@@ -1,10 +1,13 @@
 window.onload = function() {
-    $("#main").fadeIn(500)
+    $("#main").fadeIn(2000)
     setInterval(update, 1000);
+    const date = "April 5, 2023";
+    $("#date").html(date);
     function update() {
-        let timestamp = new Date(Date.now() - 1678991400000);
+        const d = new Date(date);
+        let timestamp = new Date(Date.now() - d);
         const glue = {
-            days: Math.floor((Date.now() - 1678991400000)/84000000),
+            days: Math.floor((Date.now() - d)/84000000),
             hours: timestamp.getUTCHours(),
             mins: timestamp.getUTCMinutes(),
             secs: timestamp.getUTCSeconds()
@@ -15,9 +18,9 @@ window.onload = function() {
         (glue.secs < 10 ? "0" + glue.secs : glue.secs);
         $("#squirt").html(final);
     }
-    $.ajax("/venkant/logs.json").done(function(data) {
-        const text = `<p class="messagedata" style="color:#000;">F: ${data.count.f.length} ~ WD: ${data.count.wd.length}<button id="logs">♻️</button></p>` + data.data.map(d => `<div class="message"><p class="author" style="margin-bottom:0;">${d.author} <span class="date">(${d.date})</span></p><p class="messagedata">${d.message}</p></div>`).join("<br>") + `<br><p style="color:#000;font-size:x-small;" class="messagedata">and more to be written...</p>`;
-        const logs = data.count.f.map(a => `<div class="messagedata"><p class="message"><span class="author">[F]</span> ${a.split("-")[0]} logged on <span class="author">${a.split("-")[1]}</span></p></div>`) + data.count.wd.map(a => `<div class="messagedata"><p class="message"><span class="author">[WD]</span> ${a.split("-")[0]} logged on <span class="author">${a.split("-")[1]}</span></p></div>`)  + `<p style="color:#000;font-size:x-small;" class="messagedata">really don't want more here.</p>`;
+    $.ajax("/logs.json").done(function(data) {
+        const text = `<p class="messagedata" style="color:var(--b);">F: ${data.count.f.length} ~ WD: ${data.count.wd.length}<button id="logs">♻️</button></p>` + data.data.map(d => `<div class="message"><p class="author" style="margin-bottom:0;">${d.author} <span class="date">(${d.date})</span></p><p class="messagedata">${d.message}</p></div>`).join("<br>") + `<br><p style="color:var(--b);font-size:x-small;" class="messagedata">and more to be written...</p>`;
+        const logs = data.count.f.map(a => `<div class="messagedata"><p class="message"><span class="author">[F]</span> ${a.split("-")[0]} logged on <span class="author">${a.split("-")[1]}</span></p></div>`) + data.count.wd.map(a => `<div class="messagedata"><p class="message"><span class="author">[WD]</span> ${a.split("-")[0]} logged on <span class="author">${a.split("-")[1]}</span></p></div>`)  + `<p style="color:var(--b);font-size:x-small;" class="messagedata">really don't want more here.</p>`;
         $("#messagelist").html(text);
         $("#loglist").html(logs)
         $("#logs").on("click", () => {
