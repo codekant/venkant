@@ -1,8 +1,10 @@
 window.onload = function() {
     $("#main").fadeIn(2000)
     setInterval(update, 1000);
-    const date = "April 5, 2023";
-    $("#date").html(date);
+    const date = "April 6, 2023";
+    setTimeout(() => {
+        $("#date").html(date);
+    }, 1500)
     function update() {
         const d = new Date(date);
         let timestamp = new Date(Date.now() - d);
