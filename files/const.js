@@ -1,7 +1,7 @@
 window.onload = function() {
     $("#main").fadeIn(2000)
     setInterval(update, 1000);
-    const date = "April 27, 2023";
+    const date = "April 30, 2023";
     setTimeout(() => {
         $("#date").html(date);
     }, 1500)
