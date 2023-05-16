@@ -1,10 +1,17 @@
 window.onload = function() {
     $("#main").fadeIn(2000)
     setInterval(update, 1000);
-    const date = "May 12, 2023";
+    setInterval(message, 10000);
+    const date = "May 16, 2023";
+    const goal = "July 30, 2023";
     setTimeout(() => {
-        $("#date").html(date);
-    }, 1500)
+        $("#date").html("Since " + date);
+    }, 1500);
+    let c = true;
+    function message() {
+        (c ? $("#date").html("Target " + goal) : $("#date").html("Since " + date))
+        c = !c;
+    }
     function update() {
         const d = new Date(date);
         let timestamp = new Date(Date.now() - d);
