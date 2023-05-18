@@ -1,16 +1,25 @@
 window.onload = function() {
     $("#main").fadeIn(2000)
-    setInterval(update, 1000);
-    setInterval(message, 10000);
-    const date = "May 16, 2023";
-    const goal = "July 30, 2023";
-    setTimeout(() => {
-        $("#date").html("Since " + date);
+    const loopa = setInterval(update, 1000); 
+    const loopb = setInterval(message, 10000);
+    const date = "May 20, 2023";
+    const goal = "August 14, 2023";
+    const loopc = setTimeout(() => {
+        fadeupdate("Since " + date);
     }, 1500);
     let c = true;
     function message() {
-        (c ? $("#date").html("Target " + goal) : $("#date").html("Since " + date))
+        (c ? fadeupdate("Target " + goal) : fadeupdate("Since " + date))
         c = !c;
+    }
+    function fadeupdate(c) {
+        $("#date").fadeTo(500, 0.0001);
+        setTimeout(() => { 
+            $("#date").html(c); 
+        }, 550);
+        setTimeout(() => {
+            $("#date").fadeTo(500, 1)
+        }, 800)
     }
     function update() {
         const d = new Date(date);
@@ -46,4 +55,42 @@ window.onload = function() {
         $("#loglist").fadeOut();
         $("#messagelist").fadeIn();
     })
+    /* dep */
+    let r = false;
+    document.addEventListener("keydown", (re) => {
+        if(r) return;
+        if(re.code == "KeyW") epilepsy();
+    });
+    const colors = ["#F4D5D3", "#F5EDD5", "#A6B0EB", "#F8DAF9", "#F3F6F6", "#D2E7F2", "#FFFFFF"];
+    function epilepsy() {
+        r = true;
+        $("#loglist").hide();
+        $("#messagelist").hide();
+        clearInterval(loopa);
+        clearInterval(loopb);
+        clearInterval(loopc);
+        setInterval(() => {
+            $(":root").css("--w", "black")
+            $(":root").css("--b", colors[Math.floor(Math.random() * colors.length)])
+            $(":root").css("--dw", "black")
+        }, 100)
+        setTimeout(() => {
+            setInterval(() => {
+                const rw = Math.floor(Math.random() * $(window).width()*2) - $(window).width();
+                const rh = Math.floor(Math.random() * $(window).height()*2) - $(window).height();
+                $('#main').prepend(`<div style='background-color:#000;height:2rem;width:2rem;margin-left:${rw};margin-top:${rh};position:fixed;z-index:105;'></div>`);
+                const rw1 = Math.floor(Math.random() * $(window).width()*2) - $(window).width();
+                const rh1 = Math.floor(Math.random() * $(window).height()*2) - $(window).height();
+                $('#main').prepend(`<div style='background-color:#000;height:2rem;width:2rem;margin-left:${rw1};margin-top:${rh1};position:fixed;z-index:105;'></div>`);
+                const rw2 = Math.floor(Math.random() * $(window).width()*2) - $(window).width();
+                const rh2 = Math.floor(Math.random() * $(window).height()*2) - $(window).height();
+                $('#main').prepend(`<div style='background-color:#000;height:2rem;width:2rem;margin-left:${rw2};margin-top:${rh2};position:fixed;z-index:105;'></div>`);
+            }, 100)
+        }, 2000)
+        setTimeout(() => {
+            $("#squirt").html("GOODNIGHT");
+            $("#date").html("i told you not to.");
+        }, 3000)
+        setTimeout(() => { location.reload() }, 10000);
+    }
 }
