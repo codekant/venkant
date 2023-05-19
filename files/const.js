@@ -91,6 +91,10 @@ window.onload = function() {
             $("#squirt").html("GOODNIGHT");
             $("#date").html("i told you not to.");
         }, 3000)
-        setTimeout(() => { location.reload() }, 10000);
+        setTimeout(() => {
+            $("#main").hide();
+            $("body").css("background-image", "url(codekant/files/tv-static.gif)") // codelink
+        }, 10000)
+        setTimeout(() => { location.reload() }, 12000);
     }
 }

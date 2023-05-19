@@ -1,5 +1,6 @@
 <html>
     <head>
+        <link rel="manifest" href="manifest.json" />
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,5 +39,16 @@
         </div>
         <script src="https://code.jquery.com/jquery-3.6.3.min.js" crossorigin="anonymous"></script>
         <script src="files/const.js"></script>
+        <script>
+            if ('serviceWorker' in navigator) {
+              navigator.serviceWorker.register('codekant/files/sw.js')
+                .then(registration => {
+                  console.log('Service Worker registered with scope:', registration.scope);
+                })
+                .catch(error => {
+                  console.log('Service Worker registration failed:', error);
+                });
+            }
+          </script>
     </body>
 </html>

@@ -1,0 +1,14 @@
+{
+    "name": "Venkant",
+    "short_name": "Venkant",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#171717",
+    "theme_color": "#d5d5d5",
+    "icons": [
+      {
+        "src": "codekant/files/aak.gif",
+        "type": "image/gif"
+      }
+    ]
+  }
