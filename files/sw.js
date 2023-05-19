@@ -15,14 +15,14 @@
   
 const staticCacheName = 'crack';
 const appShellFiles = [
-    '/codekant/files/aak.gif',
-    '/codekant/files/const.js',
-    '/codekant/files/style.css',
-    '/codekant/files/tv-static.gif',
-    '/codekant/files/sw.js',
-    '/codekant/index.html',
-    '/codekant/manifest.json',
-    '/codekant/'
+    '/files/aak.gif',
+    '/files/const.js',
+    '/files/style.css',
+    '/files/tv-static.gif',
+    '/files/sw.js',
+    '/index.html',
+    '/manifest.json',
+    '/'
 ];
 
 self.addEventListener('install', event => {

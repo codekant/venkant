@@ -7,7 +7,7 @@
     "theme_color": "#d5d5d5",
     "icons": [
       {
-        "src": "codekant/files/aak.gif",
+        "src": "files/aak.gif",
         "type": "image/gif"
       }
     ]

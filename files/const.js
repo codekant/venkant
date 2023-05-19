@@ -93,7 +93,7 @@ window.onload = function() {
         }, 3000)
         setTimeout(() => {
             $("#main").hide();
-            $("body").css("background-image", "url(codekant/files/tv-static.gif)") // codelink
+            $("body").css("background-image", "url(files/tv-static.gif)") // codelink
         }, 10000)
         setTimeout(() => { location.reload() }, 12000);
     }
