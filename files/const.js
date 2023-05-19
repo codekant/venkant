@@ -1,3 +1,4 @@
+this.version = "build-34.657.231"
 window.onload = function() {
     $("#main").fadeIn(2000)
     const loopa = setInterval(update, 1000); 
