@@ -1,10 +1,10 @@
-this.version = "build-34.657.231"
+this.version = "build-34.657.237"
 window.onload = function() {
     $("#main").fadeIn(2000)
     const loopa = setInterval(update, 1000); 
     const loopb = setInterval(message, 10000);
-    const date = "June 1, 2023";
-    const goal = "August 14, 2023";
+    const date = "June 3, 2023";
+    const goal = "August 20, 2023";
     const loopc = setTimeout(() => {
         fadeupdate("Since " + date);
     }, 1500);
