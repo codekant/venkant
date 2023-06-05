@@ -4,7 +4,7 @@ window.onload = function() {
     const loopa = setInterval(update, 1000); 
     const loopb = setInterval(message, 10000);
     const date = "June 6, 2023";
-    const goal = "August 20, 2023";
+    const goal = "August 21, 2023";
     const loopc = setTimeout(() => {
         fadeupdate("Since " + date);
     }, 1500);
