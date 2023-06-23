@@ -3,8 +3,8 @@ window.onload = function() {
     $("#main").fadeIn(2000)
     const loopa = setInterval(update, 1000); 
     const loopb = setInterval(message, 10000);
-    const date = "June 9, 2023";
-    const goal = "August 24, 2023";
+    const date = "June 24, 2023";
+    const goal = "September 10, 2023";
     const loopc = setTimeout(() => {
         fadeupdate("Since " + date);
     }, 1500);
