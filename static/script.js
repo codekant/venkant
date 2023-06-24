@@ -1,7 +1,7 @@
 window.onload = function() {
     $(".main").fadeIn(1000);
     // f(web)
-    $.ajax("/data.json").done(function(data) {
+    $.ajax("/venkant/data.json").done(function(data) {
         let startDate = new Date(data.startDate);
         setTimeout(() => {
             $("#date").fadeTo(500, 0.0001);
