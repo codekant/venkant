@@ -1,0 +1,18 @@
+{
+    "startDate": "25 June, 2023",
+    "currentChallenges": [
+        {
+            "name": "Bronze",
+            "days": 20
+        },
+        {
+            "name": "Silver",
+            "days": 50
+        },
+        {
+            "name": "Gold",
+            "days": 80
+        }
+    ],
+    "currentPlayers": ["Venky", "Kant"]
+}

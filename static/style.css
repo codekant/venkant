@@ -1,0 +1,84 @@
+:root {
+    --w: #d5d5d5;
+    --b: #171717;
+    --dw: #a8a8a8;
+    --green: rgb(27, 169, 58);
+    --yellow:rgb(169, 136, 27);
+    --red: rgb(169, 27, 27);
+  }
+body {
+    background-color: var(--b);
+    color: var(--w);
+    padding: 6rem;
+    padding-top:8rem;
+    font-family: 'Poppins', sans-serif;
+}
+h1, h2, h3, h4, h5 {
+    margin-top:0;
+    margin-bottom:0;
+}
+.main {
+    display:none;
+}
+.challenglelist {
+    max-width: 100%;
+}
+.challengelist .challenge {
+    margin-top: 1rem;
+    background-color: var(--w);
+    color: var(--b);
+    border-radius: 5px;
+    max-width: 100%;
+    padding: 1rem;
+    display:none;
+}
+.progress {
+    margin-top: .5rem;
+    margin-bottom: .2rem;
+    height: 5px;
+    width: 100%;
+    background-color: var(--b);
+    border-radius: 3px;
+}
+.progress .bar {
+    height:5px;
+    background-color:var(--green);
+    max-width: 100%;
+    border-radius: 3px;
+}
+.video {
+    margin-top: 1rem;
+    border-radius:5px;
+    width: 16rem;
+    height: 9rem;
+}
+::-webkit-scrollbar {
+    display:none;
+}
+@media only screen and (max-width: 600px) {
+    body { 
+        padding: 2rem;
+        padding-top: 6rem;
+    }
+    .video {
+        display: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media only screen and (min-width: 600px) {
+    .challengelist {
+        width: 50%;
+    }
+    .challengelist .challenge {
+        width: 100%;
+    }
+    .video {
+        margin-top: 3rem;
+        position: absolute;
+        top: 15%;
+        right: 15%;
+        width: 16rem;
+        height: 16rem;
+    }
+}
