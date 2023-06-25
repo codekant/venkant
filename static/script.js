@@ -43,6 +43,16 @@ window.onload = function() {
         setInterval(function() {
             update(data.startDate)
         }, 1000)
+        setInterval(function() {
+            $("#c1").fadeTo(500, 0.05);
+            $("#c2").fadeTo(700, 0.05);
+            $("#c3").fadeTo(1000, 0.05);
+            setTimeout(() => {
+                $("#c1").fadeTo(500, 1);
+                $("#c2").fadeTo(700, 1);
+                $("#c3").fadeTo(1000, 1);
+            }, 1000)
+        }, 10000)
     });;
     // f(x)
     function update(date) {
