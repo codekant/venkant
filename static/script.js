@@ -24,7 +24,7 @@ window.onload = function() {
                 print += `<div id="c${n}" class="challenge">
             ${days} Days, ${cha.name}.<br>
             <div class="progress"><div class="bar" style="width:${perc}%; background-color: ${(perc > 100) ? 'var(--red);' : (perc < 10) ? 'var(--yellow);' : 'var(--green);'}"></div></div>
-            <small>${Math.round(perc * 100)/100}% completed. (${Math.floor(elapsed)}/${days})</small>
+            <small>${Math.round(perc * 100)/100}% completed. (${Math.floor(elapsed * 10)/10}/${days})</small>
             </div>`;
             } else {
                 print += `<div id="c${n}" class="challenge">
