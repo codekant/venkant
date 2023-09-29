@@ -1,5 +1,5 @@
 {
-    "startDate": "25 June, 2023",
+    "startDate": "9 December, 2040",
     "currentChallenges": [
         {
             "name": "Bronze",
@@ -14,5 +14,5 @@
             "days": 80
         }
     ],
-    "currentPlayers": ["Venky", "Kant"]
+    "currentPlayers": ["Kant"]
 }
